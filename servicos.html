@@ -8,15 +8,16 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to bottom, #000000, #1c1c1c);
-            color: #d4af37;
+            color: #000000;
+            background-color: #ffffff;
         }
 
         header {
-            background-color: #000000;
+            background: linear-gradient(to bottom, rgba(255, 217, 92), rgba(233, 233, 233, 0.1));
             padding: 20px;
             text-align: center;
             border-bottom: 3px solid #d4af37;
+            border-top: 3px solid #d4af37;
         }
 
         header h1 {
@@ -37,9 +38,19 @@
         }
 
         section p {
-            color: #e0e0e0;
+            color: #000000;
             font-size: 1.2em;
             line-height: 1.6;
+        }
+
+        .hero {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 1.8em;
         }
 
         .container {
@@ -61,11 +72,43 @@
         }
 
         footer {
-            background-color: #000000;
+            background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
             padding: 20px;
             text-align: center;
             border-top: 3px solid #d4af37;
-            color: #d4af37;
+            color: #000000;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
+
+        .footer-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #333;
+        }
+
+        .footer-socials a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 18px;
         }
 
         footer p {
@@ -79,6 +122,10 @@
         <h1>Salão Elevation</h1>
     </header>
 
+    <div class="hero">
+        <p>Eleve sua Beleza ao Próximo Nível</p>
+    </div>
+
     <section>
         <h2>Nossos Serviços</h2>
         <p>Fazemos um lugar multidisciplinar, onde fazemos diversos serviços, desde cortes modernos a tratamentos estéticos inovadores. Na Elevation, você pode encontrar tudo o que deseja para se sentir bem consigo mesma. Venha nos visitar e confira!</p>
@@ -90,14 +137,44 @@
     </section>
 
     <div class="container">
-        <img src="img1site.jpeg" alt="Imagem 1" loading="lazy">
-        <img src="img2site.jpeg" alt="Imagem 2" width="400" height="500" loading="lazy">
+        <img src="img2site.jpeg" alt="Imagem 2" width="400" height="500" loading="lazy"> 
+        <img src="img1site.jpeg" alt="Imagem 1" height="500" loading="lazy">
         <video src="vid1site.mp4" autoplay muted loop width="300" height="400"></video>
     </div>
 
     <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="#">Promoções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Redes Sociais</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/salao_elevation" target="_blank">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/salao_elevation" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
+                        <i class="fab fa-tiktok"></i> TikTok
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
 
 </body>
 </html>
+
