@@ -1,0 +1,264 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salão Elevation</title>
+
+    <!-- Adiciona o link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #000000, #1c1c1c);
+            color: #d4af37;
+        }
+
+        header {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #d4af37;
+            font-size: 2.5em;
+        }
+
+        /* Estilo do Menu Hambúrguer */
+        .menu-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 30px;
+            color: #d4af37;
+        }
+
+        .menu {
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            z-index: 1000;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            visibility: hidden; /* Esconde o menu inicialmente */
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            color: #ffdf80;
+        }
+
+        /* Estado quando o menu estiver aberto */
+        .menu.open {
+            opacity: 1;
+            transform: scale(1);
+            visibility: visible; /* Mostra o menu */
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d4af37;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #ffdf80;
+        }
+
+        .hero {
+            height: 400px;
+            background: linear-gradient(to bottom, #000000, #333333);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #d4af37;
+            font-size: 2em;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #d4af37;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            color: #e0e0e0;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #000000;
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #d4af37;
+            color: #d4af37;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .footer-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin: 20px;
+            min-width: 200px;
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #bbb;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-socials {
+            margin-top: 20px;
+        }
+
+        .footer-socials a {
+            text-decoration: none;
+            color: #fff;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .footer-bottom {
+            background-color: #000;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            color: #bbb;
+        }
+
+        .footer-bottom a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Elevation</h1>
+        <p>Hair e Estética Avançada</p>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="menu">
+            <a href="sobrenos.html">Sobre Nós</a>
+            <a href="servicos.html">Serviços</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <p>Eleve sua Beleza ao Próximo Nível</p>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="#">Promoções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Redes Sociais</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/salao_elevation" target="_blank">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/salao_elevation" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
+            <p><a href="#">Termos de Uso</a> | <a href="#">Política de Privacidade</a></p>
+        </div>
+    </footer>
+
+    <!-- Script para controle do menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+            menu.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
