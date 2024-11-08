@@ -6,171 +6,26 @@
     <title>Salão Elevation</title>
 
     <!-- Conecta ao CSS externo -->
-    <link rel="stylesheet" href="/repo/css/index.css"> <!-- Verifique o caminho aqui -->
+    <link rel="stylesheet" href="/css/index.css">
     
     <!-- Adiciona o link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-<style>
-    body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #ffffff; /* Fundo branco */
-        color: #333;
-    }
-    
-    header {
-        background: linear-gradient(to bottom, rgba(255, 217, 92), rgba(233, 233, 233, 0.1));
-        padding: 20px;
-        text-align: center;
-        border-bottom: 3px solid #d4af37;
-        border-top: 3px solid #d4af37;
-    }
-    
-    header h1 {
-        margin: 0;
-        color: #333;
-        font-size: 2.5em;
-    }
-    
-    .menu-toggle {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        cursor: pointer;
-        font-size: 30px;
-        color: #333;
-    }
-    
-    .menu {
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #333;
-        padding: 20px;
-        border-radius: 8px;
-        z-index: 1000;
-        opacity: 0;
-        transform: scale(0.9);
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        visibility: hidden;
-    }
-    
-    .menu a {
-        display: block;
-        text-decoration: none;
-        color: #fff;
-        padding: 10px 0;
-        font-size: 18px;
-    }
-    
-    .menu a:hover {
-        color: #d4af37;
-    }
-    
-    .menu.open {
-        opacity: 1;
-        transform: scale(1);
-        visibility: visible;
-    }
-    
-    nav a {
-        text-decoration: none;
-        color: #333;
-        margin: 0 15px;
-        font-weight: bold;
-        font-size: 1.2em;
-        transition: color 0.3s ease-in-out;
-    }
-    
-    nav a:hover {
-        color: #d4af37;
-    }
-    
-    .hero {
-        height: 400px;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #333;
-        font-size: 2em;
-    }
-    
-    section {
-        padding: 40px;
-        text-align: center;
-        color: #333;
-    }
-    
-    section h2 {
-        color: #333;
-        font-size: 2em;
-        margin-bottom: 20px;
-    }
-    
-    section p {
-        color: #666;
-        font-size: 1.2em;
-        line-height: 1.6;
-    }
-    
-    footer {
-        background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-        padding: 20px;
-        text-align: center;
-        border-top: 3px solid #d4af37;
-        color: #000000;
-        text-shadow: 1px 1px 2px #d4af37;
-    }
-    
-    
-    footer p {
-        margin: 0;
-    }
-    
-    .footer-container {
-        width: 90%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    
-    .footer-column h4 {
-        color: #333;
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    
-    .footer-column ul li a {
-        text-decoration: none;
-        color: #666;
-        transition: color 0.3s ease;
-        display: flex;
-    }
-    
-    .footer-column ul li a:hover {
-        color: #333;
-    }
-    
-    .footer-socials a {
-        text-decoration: none;
-        color: #333;
-        margin-right: 15px;
-        font-size: 18px;
-    }
-    </style>
+
+    <!-- Header com a imagem de logotipo -->
     <header>
-        <h1>Elevation</h1>
-        <p>Hair e Estética Avançada</p>
+        <img src="logonovosalao.png" alt="Logo Salão Elevation" class="logo">
+       
+        
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
         <div class="menu">
             <a href="sobrenos.html">Sobre Nós</a>
             <a href="servicos.html">Serviços</a>
+            <a href="valores.html">Valores e Serviços</a>
+           
         </div>
     </header>
 
@@ -185,7 +40,7 @@
                 <ul>
                     <li><a href="#">Novidades</a></li>
                     <li><a href="#">Lançamentos</a></li>
-                    <li><a href="promoções.html">Promoções</a></li>
+                    <li><a href="valores.html">Valores e Serviços</a></li>
                 </ul>
             </div>
 
@@ -207,7 +62,6 @@
                 </div>
             </div>
         </div>
-
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
 

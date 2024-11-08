@@ -1,0 +1,94 @@
+
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: linear-gradient(to bottom, rgb(254, 255, 203), rgba(233, 233, 233, 0.1));
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 3px solid #d4af37;
+        border-top: 3px solid #d4af37;
+        }
+
+        header h1 {
+            color: #000;
+        }
+
+        .container {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .service {
+            margin-bottom: 40px;
+        }
+
+        .service img {
+            width: 80%;
+            max-width: 300px;
+            border-radius: 8px;
+        }
+
+        .price {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #d4af37;
+        }
+
+        .payment-methods {
+            text-align: center;
+            margin: 60px 0;
+            object-fit: cover;
+            
+            top: 10px;
+            left: 20px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px
+    
+        }
+
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .payment-icons img {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s;
+        }
+
+        .payment-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        .location {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .location a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        .location a:hover {
+            color: #d4af37;
+        }
+
+        footer {
+            background: rgba(255, 217, 92, 0.8);
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
+
+       
