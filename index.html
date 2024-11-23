@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
- <style>body { 
+<style>
+body { 
     margin: 0;
     font-family: 'Arial', sans-serif;
     background-color: #ffffff; /* Fundo branco */
@@ -149,13 +150,12 @@ footer {
 footer p {
     margin: 0;
 }
-
 </style>
+
     <!-- Header com a imagem de logotipo -->
     <header>
         <img src="logonovosalao.png" alt="Logo Salão Elevation" class="logo"  loading="lazy">
        
-        
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
@@ -163,7 +163,6 @@ footer p {
             <a href="sobrenos.html">Sobre Nós</a>
             <a href="servicos.html">Serviços</a>
             <a href="valores.html">Valores e Serviços</a>
-           
         </div>
     </header>
 
@@ -179,7 +178,7 @@ footer p {
                     <li><a href="#">Novidades</a></li>
                     <li><a href="#">Lançamentos</a></li>
                     <li><a href="valores.html">Valores e Serviços</a></li>
-                    <li><a href="servicos.html">espaço</a></li>
+                    <li><a href="servicos.html">Espaço</a></li>
                     <li><a href="sobrenos.html">Sobre nós</a></li>
                 </ul>
             </div>
@@ -211,6 +210,12 @@ footer p {
 
         menuToggle.addEventListener('click', () => {
             menu.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                menu.classList.remove('open');
+            }
         });
     </script>
 </body>
