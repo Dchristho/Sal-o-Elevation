@@ -5,152 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valores - Salão Elevation</title>
- <!-- Conecta ao CSS externo -->
- <link rel="stylesheet" href="/css/valores.css"> <!-- Verifique o caminho aqui -->
-    
- <!-- Adiciona o link para o Font Awesome -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Conecta ao CSS externo -->
+    <link rel="stylesheet" href="/css/valores.css">
+    <!-- Adiciona o link para o Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
-    <style>body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #f9f9f9; /* Fundo claro para a página */
-        color: #333;
-    }
-    
-    /* Estilos para o cabeçalho */
-    header {
-        text-align: center;
-        background-color: #000;
-        color: #fff;
-        padding: 20px;
-        border-bottom: 3px solid #d4af37;
-    }
-    
-    h1 {
-        margin: 0;
-        font-size: 2.5em;
-    }
-    
-    /* Estilos para o container de serviços */
-    .container {
-        padding: 20px;
-    }
-    
-    /* Estilos para os blocos de serviços */
-    .service {
-        background-color: #fff;
-        padding: 20px;
-        margin-bottom: 15px; /* Espaço entre os serviços */
-        border: 1px solid #d3d3d3; /* Borda cinza clara entre os serviços */
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombras leves para os blocos */
-    }
-    
-    /* Estilo das imagens dentro de cada serviço */
-    .service img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 5px; /* Bordas arredondadas nas imagens */
-    }
-    
-    /* Preço */
-    .price {
-        font-size: 1.5em;
-        color: #d4af37; /* Dourado para os preços */
-        font-weight: bold;
-    }
-    
-    /* Estilos para a seção de formas de pagamento */
-    .payment-methods {
-        margin-top: 40px;
-        text-align: center;
-    }
-    
-    .payment-icons img {
-        margin: 10px;
-        width: 50px;
-        height: 50px;
-    }
-    
-    /* Estilos para a localização */
-    .location {
-        margin-top: 40px;
-        text-align: center;
-    }
-    
-    .location a {
-        text-decoration: none;
-        color: #333;
-        font-size: 1.2em;
-    }
-    
-    .location img {
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-    
-    
-            footer {
-                background: rgba(255, 217, 92, 0.8);
-                text-align: center;
-                padding: 20px;
-                color: #000;
-                text-shadow: 1px 1px 2px #d4af37;
-            }
-                    /*Botão de voltar */
-                    body {
-                        margin: 0;
-                        font-family: 'Arial', sans-serif;
-                        color: #333;
-                        background-color: #f9f9f9;
-                    }
-            
-                   
-                    section {
-                        padding: 20px;
-                        text-align: center;
-                    }
-            
-                    footer {
-                        background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-        padding: 20px;
-        text-align: center;
-        border-top: 3px solid #d4af37;
-        color: #000;
-        text-shadow: 1px 1px 2px #d4af37;
-                    }
-            
-                    /* Estilo do botão Voltar */
-                    .back-button {
-                        position: absolute;
-                        top: 10px; /* Distância do topo */
-                        right: 10px; /* Distância da direita */
-                        background-color: #333; /* Cor de fundo */
-                        color: #fff; /* Cor do texto */
-                        border: none; /* Remove a borda */
-                        padding: 10px 15px; /* Espaçamento interno */
-                        font-size: 16px; /* Tamanho da fonte */
-                        border-radius: 5px; /* Cantos arredondados */
-                        cursor: pointer; /* Muda o cursor para indicar que é clicável */
-                        transition: background-color 0.10s; /* Transição suave ao passar o mouse */
-                    }
-            
-                    .back-button:hover {
-                        background-color: #555; /* Cor de fundo ao passar o mouse */
-                    }
-            
-                    @media (max-width: 600px) {
-                        .back-button {
-                            font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
-                            padding: 8px 12px; /* Espaçamento interno menor */
-                        }
-                    }
-                
-    
-           </style>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 15px; /* Reduzido de 20px para 15px */
+            margin-bottom: 15px;
+            border: 1px solid #d3d3d3;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 500px; /* Define largura máxima */
+            margin: 15px auto; /* Centraliza o bloco */
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            padding: 5px;
+        }
+
+        .arrow:hover {
+            background: #d4af37;
+            color: #fff;
+        }
+
+        .arrow.left {
+            left: 10px;
+        }
+
+        .arrow.right {
+            right: 10px;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #d4af37;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        footer {
+            background: rgba(255, 217, 92, 0.8);
+            text-align: center;
+            padding: 20px;
+            color: #000;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+    </style>
+
     <header>
         <h1>Valores e Serviços</h1>
     </header>
@@ -159,48 +125,49 @@
         <!-- Serviços -->
         <div class="service">
             <h2>Corte e Estilo</h2>
-            <img src="img/corte.jpg" alt="Corte e Estilo">
+            <div class="carousel">
+                <i class="fas fa-chevron-left arrow left" onclick="changeSlide(-1)"></i>
+                <img src="cortecabelo1.jpeg" alt="Corte e Estilo" id="carouselImage">
+                <i class="fas fa-chevron-right arrow right" onclick="changeSlide(1)"></i>
+            </div>
             <p class="price">R$ 120,00</p>
         </div>
 
         <div class="service">
             <h2>Tratamento Facial</h2>
-            <img src="facial.jpg" alt="Tratamento Facial" width="300px" height="50">
+            <img src="facial.jpg" alt="Tratamento Facial" width="100%">
             <p class="price">R$ 200,00</p>
         </div>
 
         <div class="service">
             <h2>Massagem Relaxante</h2>
-            <img src="massagem-relaxante.jpg" alt="Massagem Relaxante" width="400px">
+            <img src="massagem-relaxante.jpg" alt="Massagem Relaxante" width="100%">
             <p class="price">R$ 150,00</p>
         </div>
-
-        <!-- Formas de Pagamento -->
-        <div class="payment-methods">
-            <h2>Formas de Pagamento</h2>
-            <div class="payment-icons">
-                <img src="dinheiro.webp" alt="Dinheiro" title="Dinheiro">
-                <img src="cartão.webp" alt="Cartão" title="Cartão">
-                <img src="Pix.png"  alt="Pix" title="Pix">
-            </div>
-        </div>
-
-        <!-- Localização -->
-        <div class="location">
-            <h2>Localização</h2>
-            <a href="https://www.google.com.br/maps/place/R.+Aldeia+dos+Machacalis,+126a+-+Jardim+Etelvina,+S%C3%A3o+Paulo+-+SP,+08430-430/@-23.5276422,-46.4215221,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce646b228c6f55:0x6789c2174265b048!8m2!3d-23.5276471!4d-46.4189472!16s%2Fg%2F11trfjrn6z?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D" target="_blank">
-                <img src="maps.jpg" alt="Google Maps" width="50">
-                Clique aqui para ver no Google Maps
-            </a>
-        </div>
     </div>
-<!-- Botão de Voltar -->
-<button class="back-button" onclick="window.history.back()">
-    Voltar
-</button>
+
+    <!-- Botão de Voltar -->
+    <button class="back-button" onclick="window.history.back()">
+        Voltar
+    </button>
+
     <footer>
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        // Array de imagens do carrossel
+        const images = ["cortecabelo1.jpeg", "cortecabelo2.jpeg"];
+        let currentIndex = 0;
+
+        // Função para mudar a imagem
+        function changeSlide(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById("carouselImage").src = images[currentIndex];
+        }
+    </script>
 </body>
 
 </html>
