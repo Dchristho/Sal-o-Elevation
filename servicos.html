@@ -5,151 +5,169 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salão Elevation</title>
 
-    <!-- Conecta ao CSS externo -->
-    <link rel="stylesheet" href="css/servicos.css"> <!-- Verifique o caminho aqui -->
-    
     <!-- Adiciona o link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
 </head>
 <body>
- <style> body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #000000;
-    background-color: #ffffff;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+        }
 
-header {
-    background: linear-gradient(to bottom, rgba(255, 217, 92), rgba(233, 233, 233, 0.1));
-    padding: 20px;
-    text-align: center;
-    border-bottom: 3px solid #d4af37;
-    border-top: 3px solid #d4af37;
-}
+        header {
+            background: linear-gradient(to bottom, rgba(255, 217, 92), rgba(233, 233, 233, 0.1));
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            border-top: 3px solid #d4af37;
+        }
 
-header h1 {
-    margin: 0;
-    color: #d4af37;
-    font-size: 2.5em;
-}
+        header h1 {
+            margin: 0;
+            color: #d4af37;
+            font-size: 2.5em;
+        }
 
-section {
-    padding: 40px;
-    text-align: center;
-}
+        section {
+            padding: 40px;
+            text-align: center;
+        }
 
-section h2 {
-    color: #d4af37;
-    font-size: 2em;
-    margin-bottom: 20px;
-}
+        section h2 {
+            color: #d4af37;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
 
-section p {
-    color: #000000;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
+        section p {
+            color: #000000;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
 
-.hero {
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
-    color: #333;
-    font-size: 1.8em;
-}
+        .hero {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+            color: #333;
+            font-size: 1.8em;
+        }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    padding: 40px;
-}
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 40px;
+        }
 
-.container img, .container video {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        .container img, .container video {
+            width: 100%; /* Torna as imagens e vídeos responsivos */
+            max-width: 100%; /* Impede que a largura ultrapasse a tela */
+            height: auto; /* Mantém a proporção */
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-.container img:hover, .container video:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
+        .container img:hover, .container video:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
-footer {
-    background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-    padding: 20px;
-    text-align: center;
-    border-top: 3px solid #d4af37;
-    color: #000000;
-    text-shadow: 1px 1px 2px #d4af37;
-}
+        footer {
+            background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #d4af37;
+            color: #000000;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
 
-.footer-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+        .footer-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
 
-.footer-column h4 {
-    color: #333;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
+        .footer-column h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
 
-.footer-column ul li a {
-    text-decoration: none;
-    color: #666;
-    transition: color 0.3s ease;
-}
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s ease;
+        }
 
-.footer-column ul li a:hover {
-    color: #333;
-}
+        .footer-column ul li a:hover {
+            color: #333;
+        }
 
-.footer-socials a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 15px;
-    font-size: 18px;
-}
+        .footer-socials a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 18px;
+        }
 
-footer p {
-    margin: 0;
-}
+        footer p {
+            margin: 0;
+        }
 
+        /* Estilo do botão Voltar */
+        .back-button {
+            position: absolute;
+            top: 10px; /* Distância do topo */
+            right: 10px; /* Distância da direita */
+            background-color: #333; /* Cor de fundo */
+            color: #fff; /* Cor do texto */
+            border: none; /* Remove a borda */
+            padding: 10px 15px; /* Espaçamento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            border-radius: 5px; /* Cantos arredondados */
+            cursor: pointer; /* Muda o cursor para indicar que é clicável */
+            transition: background-color 0.10s; /* Transição suave ao passar o mouse */
+        }
 
- /* Estilo do botão Voltar */
- .back-button {
-    position: absolute;
-    top: 10px; /* Distância do topo */
-    right: 10px; /* Distância da direita */
-    background-color: #333; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    border: none; /* Remove a borda */
-    padding: 10px 15px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.10s; /* Transição suave ao passar o mouse */
-}
+        .back-button:hover {
+            background-color: #555; /* Cor de fundo ao passar o mouse */
+        }
 
-.back-button:hover {
-    background-color: #555; /* Cor de fundo ao passar o mouse */
-}
+        @media (max-width: 600px) {
+            .back-button {
+                font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
+                padding: 8px 12px; /* Espaçamento interno menor */
+            }
 
-@media (max-width: 600px) {
-    .back-button {
-        font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
-        padding: 8px 12px; /* Espaçamento interno menor */
-    }
-}
-</style>
+            .container {
+                grid-template-columns: 1fr; /* Exibe as imagens em uma coluna */
+                padding: 20px;
+            }
+
+            .container img, .container video {
+                width: 100%; /* Garante que as imagens e vídeos ocuparam toda a largura */
+                height: auto;
+                margin-bottom: 20px; /* Adiciona um espaço entre os elementos */
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+
     <header>
         <h1>Salão Elevation</h1>
     </header>
@@ -167,11 +185,12 @@ footer p {
         <h2>Espaço</h2>
         <p>Contamos com um espaço especializado para massagens, relaxamentos, operações estéticas e muito mais.</p>
     </section>
-    
+
     <!-- Botão de Voltar -->
     <button class="back-button" onclick="window.history.back()">
         Voltar
     </button>
+
     <div class="container">
         <img src="img2site.jpeg" alt="Imagem 2" width="400" height="500" loading="lazy"> 
         <img src="img1site.jpeg" alt="Imagem 1" height="500" loading="lazy">
@@ -214,4 +233,3 @@ footer p {
 
 </body>
 </html>
-

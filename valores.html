@@ -5,13 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Salão Elevation</title>
-    <!-- Conecta ao CSS externo -->
     <link rel="stylesheet" href="/css/valores.css">
-    <!-- Adiciona o link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-
-<body>
     <style>
         body {
             margin: 0;
@@ -39,18 +34,18 @@
 
         .service {
             background-color: #fff;
-            padding: 15px; /* Reduzido de 20px para 15px */
+            padding: 15px;
             margin-bottom: 15px;
             border: 1px solid #d3d3d3;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 500px; /* Define largura máxima */
-            margin: 15px auto; /* Centraliza o bloco */
+            max-width: 500px;
+            margin: 15px auto;
         }
 
         .carousel {
             position: relative;
-            width: 100%;
+            text-align: center;
         }
 
         .carousel img {
@@ -59,36 +54,24 @@
             border-radius: 8px;
         }
 
-        .arrow {
+        .carousel button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 30px;
-            color: #333;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.7);
-            border-radius: 50%;
-            padding: 5px;
-        }
-
-        .arrow:hover {
-            background: #d4af37;
+            background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
         }
 
-        .arrow.left {
+        .carousel button.left {
             left: 10px;
         }
 
-        .arrow.right {
+        .carousel button.right {
             right: 10px;
-        }
-
-        .price {
-            font-size: 1.5em;
-            color: #d4af37;
-            font-weight: bold;
-            text-align: center;
         }
 
         footer {
@@ -117,86 +100,110 @@
         }
     </style>
 
+</head>
+
+<body>
+    <!-- Botão de Voltar -->
+    <button class="back-button" onclick="window.history.back()">
+        Voltar
+    </button>
+
     <header>
         <h1>Serviços</h1>
     </header>
 
     <div class="container">
-        <!-- Serviços -->
         <div class="service">
             <h2>Corte e Estilo</h2>
             <div class="carousel">
-                <i class="fas fa-chevron-left arrow left" onclick="changeSlide(-1, 'carouselImage')"></i>
-                <img src="cortecabelo1.jpeg" alt="Corte e Estilo" id="carouselImage">
-                <i class="fas fa-chevron-right arrow right" onclick="changeSlide(1, 'carouselImage')"></i>
+                <button class="left" onclick="changeSlide(-1, 'carouselCorte')">&#10094;</button>
+                <img id="carouselCorte" src="cortecabelo1.jpeg" alt="Corte e Estilo">
+                <button class="right" onclick="changeSlide(1, 'carouselCorte')">&#10095;</button>
             </div>
-            <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma. É a coroa da pessoa.</p></b>
+            <b><p>é o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma.</p></b>
         </div>
 
         <div class="service">
             <h2>Manicure</h2>
             <div class="carousel">
-                <i class="fas fa-chevron-left arrow left" onclick="changeSlide(-1, 'carouselManicureImage')"></i>
-                <img src="manicure1.jpeg" alt="Manicure" id="carouselManicureImage">
-                <i class="fas fa-chevron-right arrow right" onclick="changeSlide(1, 'carouselManicureImage')"></i>
+                <button class="left" onclick="changeSlide(-1, 'carouselManicure')">&#10094;</button>
+                <img id="carouselManicure" src="manicure1.jpeg" alt="Manicure">
+                <button class="right" onclick="changeSlide(1, 'carouselManicure')">&#10095;</button>
             </div>
-            <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma. É a coroa da pessoa.</p></b>
+            <b><p>São cuidados, responsáveis pela saúde e pela beleza das mãos e dos pés.</p></b>
         </div>
 
         <div class="service">
             <h2>Tratamento Facial</h2>
             <img src="facial.jpg" alt="Tratamento Facial" width="100%">
-            <b><p>Tratamento Facial, são procedimentos que visam reduzir sinais de envelhecimento, como rugas, linhas finas, flacidez da pele, perda de volume facial, manchas e textura irregular da pele, que podem ser resultado da idade, exposição ao sol, estresse e outros fatores ambientais e de estilo de vida.</p></b>
+            <b><p>Tratamento Facial: procedimentos que reduzem sinais de envelhecimento, como rugas e manchas.</p></b>
         </div>
 
         <div class="service">
             <h2>Massagem Relaxante</h2>
             <img src="massagem-relaxante.jpg" alt="Massagem Relaxante" width="100%">
-            <b><p>É uma prática que consiste na aplicação da força ou vibração sobre os tecidos moles, a fim de estimular a circulação sanguínea, a mobilidade, a elasticidade ou alívio de determinadas dores corporais ou traumas físicos.</p></b>
+            <b><p>Massagem relaxante promove alívio de tensões, melhora a circulação e reduz o estresse.</p></b>
         </div>
 
         <div class="service">
             <h2>Bumbum na Nuca</h2>
             <img src="bubum na nuca.jpg" alt="Bumbum na Nuca" width="100%">
-            <b><p class=>A técnica do bumbum turbinado é feita na área dos glúteos, para fortalecer e tratar a flacidez, fazendo uma mudança significativa para a forma do bumbum.</p></b>
+            <b><p>Técnica para fortalecer os glúteos e tratar a flacidez, melhorando a forma.</p></b>
         </div>
 
         <div class="service">
             <h2>Drenagem</h2>
             <img src="drenagem.jpg" alt="Drenagem" width="100%">
-            <b><p class=>De forma manual a drenagem é feita a partir de círculos com as mãos e com o polegar, movimentos combinados e pressão em bracelete. Tendo como objetivo aumentar o volume e a velocidade da linfa a ser transportada pelos vasos e ductos linfáticos por meio de manobras que imitem o bombeamento fisiológico.</p></b>
+            <b><p>Drenagem linfática: estimula a circulação e reduz a retenção de líquidos.</p></b>
         </div>
 
         <div class="service">
             <h2>Ofurô</h2>
             <img src="img2site.jpeg" alt="Ofurô" width="100%">
-            <b><p class=>De origem japonesa, os Ofurôs compõem uma categoria de banheira utilizada para promover o profundo relaxamento através dos tradicionais banhos por imersão. O nosso ofurô tem a capacidade de fazer massagem através de "ondas" de águas, sendo utilizado para fins de relaxamento, ou até pode ser incluído em pacotes como de noivas e etc.</p></b>
+            <b><p>Banhos relaxantes em imersão, com massagem de ondas de água para relaxamento profundo.</p></b>
         </div>
     </div>
-
-    <!-- Botão de Voltar -->
-    <button class="back-button" onclick="window.history.back()">
-        Voltar
-    </button>
 
     <footer>
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
 
     <script>
-        // Função para mudar a imagem do carrossel
+        const carousels = {
+            carouselCorte: ["cortecabelo1.jpeg", "cortecabelo2.jpeg"],
+            carouselManicure: ["manicure1.jpeg", "manicure2.jpeg", "manicure3.jpeg"]
+        };
+
         function changeSlide(direction, carouselId) {
-            const images = {
-                'carouselImage': ["cortecabelo1.jpeg", "cortecabelo2.jpeg"],
-                'carouselManicureImage': ["manicure1.jpeg", "manicure2.jpeg", "manicure3.jpeg"]
-            };
-            let currentIndex = images[carouselId].indexOf(document.getElementById(carouselId).src.split('/').pop());
+            const images = carousels[carouselId];
+            const imgElement = document.getElementById(carouselId);
+            let currentIndex = images.indexOf(imgElement.src.split('/').pop());
 
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = images[carouselId].length - 1;
-            if (currentIndex >= images[carouselId].length) currentIndex = 0;
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            imgElement.src = images[currentIndex];
+        }
+    </script>
+</body>
 
-            document.getElementById(carouselId).src = images[carouselId][currentIndex];
+</html>            let currentIndex = images.indexOf(imgElement.src.split('/').pop());
+
+            currentIndex = (currentIndex + direction + images.length) % images.length;
+            imgElement.src = images[currentIndex];
+        }
+
+        const enlargeables = document.querySelectorAll('.enlargeable');
+        const overlay = document.getElementById('overlay');
+
+        enlargeables.forEach(img => {
+            img.addEventListener('click', () => {
+                img.classList.add('enlarged');
+                overlay.style.display = 'block';
+            });
+        });
+
+        function closeEnlarged() {
+            document.querySelector('.enlarged').classList.remove('enlarged');
+            overlay.style.display = 'none';
         }
     </script>
 </body>

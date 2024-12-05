@@ -1,162 +1,182 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salão Elevation</title>
 
-    <!-- Conecta ao CSS externo -->
-    <link rel="stylesheet" href="/css/index.css">
-    
-    <!-- Adiciona o link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #000;
+            border-bottom: 3px solid #d4af37;
+            border-top: 3px solid #d4af37;
+            position: relative;
+        }
+
+        .logo {
+            width: auto;
+            height: 150px;
+            border: 2px solid #d4af37;
+            border-radius: 10px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-toggle {
+            font-size: 30px;
+            color: #d4af37;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu {
+            visibility: hidden;
+            opacity: 0;
+            max-height: 0;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
+        }
+
+        .menu.open {
+            visibility: visible;
+            opacity: 1;
+            max-height: 500px;
+        }
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .menu a:last-child {
+            margin-bottom: 0;
+        }
+
+        .menu a:hover {
+            color: #d4af37;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 15px;
+            background-color: #f5f5f5;
+            font-size: 1.5em;
+        }
+
+        footer {
+            background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
+            padding: 40px 10px;
+            color: #000;
+            border-top: 3px solid #d4af37;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .footer-column h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #666;
+        }
+
+        .footer-column ul li a:hover {
+            color: #d4af37;
+        }
+
+        .footer-socials a {
+            margin: 0 10px;
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-socials a:hover {
+            color: #d4af37;
+        }
+
+        footer p {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #d4af37;
+            padding-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-column {
+                max-width: 100%;
+            }
+
+            .hero {
+                font-size: 1.2em;
+                padding: 30px 10px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<style>
-body { 
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #ffffff; /* Fundo branco */
-    color: #333;
-}
-
-/* Estilos para o cabeçalho */
-header {
-    display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center;     /* Centraliza o conteúdo verticalmente */
-    padding: 20px;
-    background-color: #000; /* Fundo preto completo */
-    border-bottom: 3px solid #d4af37;
-    border-top: 3px solid #d4af37;
-}
-
-/* Estilos para a logo */
-.logo {
-    width: auto;
-    height: 150px; /* Ajuste o tamanho conforme necessário */
-    border: 2px solid #d4af37; /* Borda dourada */
-    border-radius: 10px; /* Bordas suavemente arredondadas */
-    object-fit: contain; /* Ajusta a imagem sem distorcer */
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.05); /* Aumenta a logo levemente ao passar o mouse */
-}
-
-header h1 {
-    margin: 0;
-    color: #fff; /* Texto em branco para melhor contraste */
-    font-size: 2.5em;
-}
-
-header p {
-    margin: 5px 0;
-    color: #d4af37; /* Subtítulo em dourado */
-}
-
-.menu-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-    font-size: 30px;
-    color: #d4af37; /* Ícone do menu em dourado */
-}
-
-.menu {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    z-index: 1000;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s 0.3s;
-    visibility: hidden; /* O menu fica invisível fora de foco */
-}
-
-.menu.open {
-    opacity: 1;
-    transform: scale(1);
-    visibility: visible;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.menu a {
-    display: block;
-    text-decoration: none;
-    color: #000;
-    padding: 10px 0;
-    font-size: 18px;
-}
-
-.menu a:hover {
-    color: #d4af37;
-}
-
-.hero {
-    height: 400px;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #333;
-    font-size: 2em;
-}
-
-footer {
-    background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-    padding: 20px;
-    text-align: center;
-    border-top: 3px solid #d4af37;
-    color: #000;
-    text-shadow: 1px 1px 2px #d4af37;
-}
-
-.footer-container {
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer-column h4 {
-    color: #333;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.footer-column ul li a {
-    text-decoration: none;
-    color: #666;
-    transition: color 0.3s ease;
-}
-
-.footer-column ul li a:hover {
-    color: #333;
-}
-
-.footer-socials a {
-    text-decoration: none;
-    color: #333;
-    margin-right: 15px;
-    font-size: 18px;
-}
-
-footer p {
-    margin: 0;
-}
-</style>
-
-    <!-- Header com a imagem de logotipo -->
     <header>
         <img src="logonovosalao.png" alt="Logo Salão Elevation" class="logo" loading="lazy">
-       
         <div class="menu-toggle">
             <i class="fas fa-bars"></i>
         </div>
@@ -176,7 +196,7 @@ footer p {
             <div class="footer-column">
                 <h4>Explorar</h4>
                 <ul>
-                    <li><a href="valores.html"> Serviços</a></li>
+                    <li><a href="valores.html">Serviços</a></li>
                     <li><a href="servicos.html">Espaço</a></li>
                     <li><a href="sobrenos.html">Sobre nós</a></li>
                 </ul>
@@ -207,12 +227,10 @@ footer p {
         const menuToggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('.menu');
 
-        // Alternar a classe "open" ao clicar no ícone do menu
         menuToggle.addEventListener('click', () => {
             menu.classList.toggle('open');
         });
 
-        // Fechar o menu ao clicar fora dele
         document.addEventListener('click', (e) => {
             if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
                 menu.classList.remove('open');
@@ -220,4 +238,5 @@ footer p {
         });
     </script>
 </body>
+
 </html>

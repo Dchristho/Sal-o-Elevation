@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,103 +11,128 @@
     
     <!-- Adiciona o link para o Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    
 </head>
+
 <body>
- <style> body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #000000;
-    background-color: #ffffff;
-}
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+        }
 
-header {
-    background-color: #000; /* Fundo preto completo */
-    padding: 20px;
-    text-align: center;
-    border-bottom: 3px solid #d4af37;
-    border-top: 3px solid #d4af37;
-}
+        header {
+            background-color: #000; /* Fundo preto completo */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+            border-top: 3px solid #d4af37;
+        }
 
-header h1 {
-    margin: 0;
-    color: #ffffff;
-    font-size: 2.5em;
-    text-shadow: 1px 1px 2px #d4af37;
-}
+        header h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 2.5em;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
 
-section {
-    padding: 40px;
-    text-align: center;
-    border-top: 2px solid #d4af37;
-    border-bottom: 2px solid #d4af37;
-}
+        section {
+            padding: 40px;
+            text-align: center;
+            border-top: 2px solid #d4af37;
+            border-bottom: 2px solid #d4af37;
+        }
 
-section h2 {
-    color: #000000;
-    font-size: 2em;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px #d4af37;
-}
+        section h2 {
+            color: #000000;
+            font-size: 2em;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
 
-section p {
-    color: #000000;
-    font-size: 1.2em;
-    line-height: 1.6;
-}
+        section p {
+            color: #000000;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
 
-footer {
-    background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-    padding: 20px;
-    text-align: center;
-    border-top: 3px solid #d4af37;
-    color: #000;
-    text-shadow: 1px 1px 2px #d4af37;
-}
+        footer {
+            background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
+            padding: 20px;
+            text-align: center;
+            border-top: 3px solid #d4af37;
+            color: #000;
+            text-shadow: 1px 1px 2px #d4af37;
+        }
 
-footer p {
-    margin: 0;
-}
-/*Botão de voltar */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-}
+        footer p {
+            margin: 0;
+        }
 
-section {
-    padding: 20px;
-    text-align: center;
-}
+        /* Estilo do botão Voltar */
+        .back-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.10s;
+        }
 
+        .back-button:hover {
+            background-color: #555;
+        }
 
-/* Estilo do botão Voltar */
-.back-button {
-    position: absolute;
-    top: 10px; /* Distância do topo */
-    right: 10px; /* Distância da direita */
-    background-color: #333; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    border: none; /* Remove a borda */
-    padding: 10px 15px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    border-radius: 5px; /* Cantos arredondados */
-    cursor: pointer; /* Muda o cursor para indicar que é clicável */
-    transition: background-color 0.10s; /* Transição suave ao passar o mouse */
-}
+        /* Estilo de imagens e vídeos para responsividade */
+        .responsive-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
 
-.back-button:hover {
-    background-color: #555; /* Cor de fundo ao passar o mouse */
-}
+        .responsive-container img, .responsive-container video {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-@media (max-width: 600px) {
-    .back-button {
-        font-size: 14px; /* Tamanho da fonte menor em dispositivos móveis */
-        padding: 8px 12px; /* Espaçamento interno menor */
-    }
-}
-</style>
+        .responsive-container img:hover, .responsive-container video:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 600px) {
+            .back-button {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+
+            section h2 {
+                font-size: 1.8em;
+            }
+
+            section p {
+                font-size: 1.1em;
+            }
+
+            .responsive-container {
+                grid-template-columns: 1fr;
+            }
+
+            .responsive-container img, .responsive-container video {
+                margin-bottom: 20px; /* Espacamento entre as imagens e vídeos */
+            }
+        }
+    </style>
+
     <header>
         <h1>Salão Elevation</h1>
     </header>
@@ -121,9 +147,11 @@ section {
         <p>No Salão Elevation, oferecemos serviços de terapia capilar e estética de alta qualidade. Nossa equipe é formada por profissionais experientes e apaixonados pelo que fazem, proporcionando sempre um atendimento de excelência.</p>
     </section>
 
+    
+
     <footer>
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
-
 </body>
+
 </html>
