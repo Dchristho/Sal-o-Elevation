@@ -42,6 +42,24 @@
             max-width: 500px;
             margin: 15px auto;
         }
+         
+        /* Botão de reserva */
+        .service a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #d4af37;
+            color: #fff;
+            border-radius: 25px;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service a:hover {
+            background-color: #b5942f;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
 
         .carousel {
             position: relative;
@@ -75,13 +93,48 @@
         }
 
         footer {
-            background: rgba(255, 217, 92, 0.8);
-            text-align: center;
+            background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
             padding: 20px;
-            color: #000;
+            text-align: center;
+            border-top: 3px solid #d4af37;
+            color: #000000;
             text-shadow: 1px 1px 2px #d4af37;
         }
 
+        .footer-container {
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-column h4 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #666;
+            transition: color 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: #333;
+        }
+
+        .footer-socials a {
+            text-decoration: none;
+            color: #333;
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        footer p {
+            margin: 0;
+        }
         .back-button {
             position: absolute;
             top: 10px;
@@ -121,7 +174,7 @@
                 <button class="right" onclick="changeSlide(1, 'carouselCorte')">&#10095;</button>
             </div>
             <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes de Cabelo%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes de Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
         <div class="service">
@@ -132,53 +185,82 @@
                 <button class="right" onclick="changeSlide(1, 'carouselManicure')">&#10095;</button>
             </div>
             <b><p>São cuidados, responsáveis pela saúde e pela beleza das mãos e dos pés.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
         <div class="service">
             <h2>Tratamento Facial</h2>
             <img src="facial.jpg" alt="Tratamento Facial" width="100%">
             <b><p>Tratamento Facial: Procedimentos que reduzem sinais de envelhecimento, como rugas e manchas.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Tratamento Facial%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Tratamento Facial%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
         <div class="service">
             <h2>Massagem Relaxante</h2>
             <img src="massagem-relaxante.jpg" alt="Massagem Relaxante" width="100%">
             <b><p>Massagem relaxante promove alívio de tensões, melhora a circulação e reduz o estresse.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Massagem%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Massagem%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
         <div class="service">
             <h2>Bumbum na Nuca</h2>
             <img src="bubum na nuca.jpg" alt="Bumbum na Nuca" width="100%">
             <b><p>Técnica para fortalecer os glúteos e tratar a flacidez, melhorando a forma.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Bumbum na Nuca%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Bumbum na Nuca%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
         <div class="service">
             <h2>Drenagem</h2>
             <img src="drenagem.jpg" alt="Drenagem" width="100%">
             <b><p>Drenagem linfática: estimula a circulação e reduz a retenção de líquidos.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Drenagem%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Drenagem%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
             
         </div>
          
         <div class="service">
             <img src="maquiagem.jpg" alt="Maquiagem">
             <h3>Maquiagem</h3>
-            <a href="https://api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20*Maquiagem*%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="https://api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20*Maquiagem*%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
     </div>
         <div class="service">
             <h2>Ofurô</h2>
             <img src="img2site.jpeg" alt="Ofurô" width="100%">
             <b><p>Banhos relaxantes em imersão, com massagem de ondas de água para relaxamento profundo.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Ofurô%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Ofurô%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
     </div>
 
     <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Explorar</h4>
+                <ul>
+                    <li><a href="#">Lançamentos</a></li>
+                    <li><a href="#">Novidades</a></li>
+                    <li><a href="#">Promoções</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Redes Sociais</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/salao_elevation" target="_blank">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/salao_elevation" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
+                        <i class="fab fa-tiktok"></i> TikTok
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
 
