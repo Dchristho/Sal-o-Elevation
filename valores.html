@@ -120,7 +120,7 @@
                 <img id="carouselCorte" src="cortecabelo1.jpeg" alt="Corte e Estilo">
                 <button class="right" onclick="changeSlide(1, 'carouselCorte')">&#10095;</button>
             </div>
-            <b><p>é o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma.</p></b>
+            <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma.</p></b>
         </div>
 
         <div class="service">
@@ -136,7 +136,7 @@
         <div class="service">
             <h2>Tratamento Facial</h2>
             <img src="facial.jpg" alt="Tratamento Facial" width="100%">
-            <b><p>Tratamento Facial: procedimentos que reduzem sinais de envelhecimento, como rugas e manchas.</p></b>
+            <b><p>Tratamento Facial: Procedimentos que reduzem sinais de envelhecimento, como rugas e manchas.</p></b>
         </div>
 
         <div class="service">
@@ -155,8 +155,16 @@
             <h2>Drenagem</h2>
             <img src="drenagem.jpg" alt="Drenagem" width="100%">
             <b><p>Drenagem linfática: estimula a circulação e reduz a retenção de líquidos.</p></b>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Drenagem%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+            
         </div>
-
+         
+        <div class="service">
+            <img src="maquiagem.jpg" alt="Maquiagem">
+            <h3>Maquiagem</h3>
+            <a href="https://api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20*Maquiagem*%20do%20Salão%20Elevation!" target="_blank">Reservar</a>
+        </div>
+    </div>
         <div class="service">
             <h2>Ofurô</h2>
             <img src="img2site.jpeg" alt="Ofurô" width="100%">
@@ -185,27 +193,8 @@
     </script>
 </body>
 
-</html>            let currentIndex = images.indexOf(imgElement.src.split('/').pop());
-
-            currentIndex = (currentIndex + direction + images.length) % images.length;
-            imgElement.src = images[currentIndex];
-        }
-
-        const enlargeables = document.querySelectorAll('.enlargeable');
-        const overlay = document.getElementById('overlay');
-
-        enlargeables.forEach(img => {
-            img.addEventListener('click', () => {
-                img.classList.add('enlarged');
-                overlay.style.display = 'block';
-            });
-        });
-
-        function closeEnlarged() {
-            document.querySelector('.enlarged').classList.remove('enlarged');
-            overlay.style.display = 'none';
-        }
-    </script>
+</html>           
+   
 </body>
 
 </html>
