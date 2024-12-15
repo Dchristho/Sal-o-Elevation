@@ -158,8 +158,52 @@
         footer p {
             margin: 0;
         }
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column; /* Organiza os itens verticalmente */
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%; /* Ajusta a largura dos itens para caber em telas menores */
+    }
+
+    .hero {
+        padding: 60px 20px; /* Ajusta o espaçamento para telas pequenas */
+    }
+
+    .hero h1 {
+        font-size: 2em; /* Reduz o tamanho da fonte para títulos */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .hero a {
+        font-size: 1em; /* Diminui o botão para dispositivos móveis */
+        padding: 10px 20px;
+    }
+
+    footer .footer-container {
+        flex-direction: column; /* Coloca as colunas do footer verticalmente */
+        align-items: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px; /* Espaçamento entre as colunas no footer */
+        text-align: center;
+    }
+}
+
+/* Alteração na cor do texto na área de botões */
+.feature h3, .feature p {
+    color: #000; /* Altera o texto para preto */
+}
 
     </style>
+
 </head>
 
 <body>
