@@ -9,196 +9,207 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <style>
+        /* Estilo geral */
         body {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f7f8fa;
             color: #333;
         }
 
         header {
-            text-align: center;
-            padding: 20px 10px;
-            background-color: #000;
-            border-bottom: 3px solid #d4af37;
-            border-top: 3px solid #d4af37;
             position: relative;
-        }
-
-        .logo {
-            width: auto;
-            height: 150px;
-            border: 2px solid #d4af37;
-            border-radius: 10px;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .menu-toggle {
-            font-size: 30px;
-            color: #d4af37;
-            cursor: pointer;
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .menu {
-            visibility: hidden;
-            opacity: 0;
-            max-height: 0;
-            position: absolute;
-            top: 60px;
-            right: 20px;
-            background-color: #ffffff;
-            border-radius: 8px;
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            transition: opacity 0.3s ease, max-height 0.3s ease, visibility 0.3s ease;
-        }
-
-        .menu.open {
-            visibility: visible;
-            opacity: 1;
-            max-height: 500px;
-        }
-
-        .menu a {
-            display: block;
-            text-decoration: none;
-            color: #000;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .menu a:last-child {
-            margin-bottom: 0;
-        }
-
-        .menu a:hover {
-            color: #d4af37;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #000;
+            color: #fff;
         }
 
         .hero {
+            background-image: url('banner-salao.jpg'); /* Substitua pela imagem do salão */
+            background-size: cover;
+            background-position: center;
             text-align: center;
-            padding: 50px 15px;
-            background-color: #f5f5f5;
-            font-size: 1.5em;
+            padding: 120px 20px;
+            color: #fff;
+            position: relative;
         }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .hero a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #d4af37;
+            color: #fff;
+            font-size: 1.2em;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero a:hover {
+            background-color: #b5942f;
+        }
+
+        .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.feature {
+    width: 300px;
+    border: 1px solid #000; /* Borda preta fina */
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none; /* Remove sublinhado do link */
+    color: #333;
+}
+
+.feature:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 3em;
+    color: #d4af37;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.feature p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.feature a {
+    text-decoration: none;
+    display: block; /* Faz o link ocupar toda a área do bloco */
+    height: 100%; /* Permite o clique em todo o bloco */
+    color: inherit; /* Garante que a cor do texto se mantenha */
+}
+
 
         footer {
             background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-            padding: 40px 10px;
-            color: #000;
+            padding: 20px;
+            text-align: center;
             border-top: 3px solid #d4af37;
+            color: #000000;
+            text-shadow: 1px 1px 2px #d4af37;
         }
 
         .footer-container {
+            width: 90%;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-column {
-            flex: 1;
-            min-width: 200px;
-            text-align: center;
-            margin-bottom: 20px;
         }
 
         .footer-column h4 {
+            color: #333;
             font-size: 16px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-
-        .footer-column ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-column ul li {
-            margin-bottom: 5px;
+            margin-bottom: 20px;
         }
 
         .footer-column ul li a {
             text-decoration: none;
-            color: #000;
+            color: #333;
+            transition: color 0.3s ease;
         }
 
         .footer-column ul li a:hover {
-            color: #d4af37;
+            color: #000;
         }
 
         .footer-socials a {
-            margin: 0 10px;
-            font-size: 18px;
-            color: #333;
+            display: flex;
             text-decoration: none;
-        }
-
-        .footer-socials a:hover {
-            color: #d4af37;
+            color: #333;
+            margin-right: 15px;
+            font-size: 18px;
         }
 
         footer p {
-            margin-top: 15px;
-            text-align: center;
-            font-size: 14px;
-            border-top: 1px solid #d4af37;
-            padding-top: 10px;
+            margin: 0;
         }
 
-        @media (max-width: 768px) {
-            .footer-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-column {
-                max-width: 100%;
-            }
-
-            .hero {
-                font-size: 1.2em;
-                padding: 30px 10px;
-            }
-        }
     </style>
 </head>
 
 <body>
     <header>
-        <img src="logonovosalao.png" alt="Logo Salão Elevation" class="logo" loading="lazy">
-        <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <div class="menu">
-            <a href="sobrenos.html">Sobre Nós</a>
-            <a href="servicos.html">Espaço</a>
-            <a href="valores.html">Serviços</a>
-        </div>
+        <img src="logonovosalao.png" alt="Logo Salão Elevation" style="height: 300px;" />
     </header>
 
     <div class="hero">
-        <p>Eleve sua Beleza ao Próximo Nível</p>
+        <h1>Eleve sua Beleza ao Próximo Nível</h1>
+        <p>Experimente nossos serviços exclusivos para transformar seu visual.</p>
+        <a href="valores.html">Veja Nossos Serviços</a>
     </div>
+    <div class="hero">
+        
+        <p>Experimente nossos serviços exclusivos para transformar seu visual.</p>
+        <a href="servicos.html">Veja Nosso Espaço</a>
+    </div>
+    <div class="hero">
+     
+        <p>Experimente nossos serviços exclusivos para transformar seu visual.</p>
+        <a href="sobrenos.html">Conheça o salão</a>
+    </div>
+
+    <div class="features">
+        <a href="valores.html" class="feature">
+            <i class="fas fa-cut"></i>
+            <h3>Cortes Personalizados</h3>
+            <p>Transformamos seu estilo com cortes modernos e sob medida.</p>
+        </a>
+        <a href="valores.html" class="feature">
+            <i class="fas fa-paint-brush"></i>
+            <h3>Maquiagem</h3>
+            <p>Tons vibrantes e duradouros para destacar sua personalidade.</p>
+        </a>
+        <a href="valores.html" class="feature">
+            <i class="fas fa-spa"></i>
+            <h3>Cuidados Especiais</h3>
+            <p>Momentos relaxantes com nossos serviços de spa e beleza.</p>
+        </a>
+    </div>
+    
 
     <footer>
         <div class="footer-container">
             <div class="footer-column">
                 <h4>Explorar</h4>
                 <ul>
-                    <li><a href="valores.html">Serviços</a></li>
-                    <li><a href="servicos.html">Espaço</a></li>
-                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><b><a href="servicos.html">Espaço</a></li>
+                    <li><a href="valores.html">Serviços e Agendamento</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li></b>
                 </ul>
             </div>
 
@@ -220,23 +231,9 @@
                 </div>
             </div>
         </div>
+
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
-
-    <script>
-        const menuToggle = document.querySelector('.menu-toggle');
-        const menu = document.querySelector('.menu');
-
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('open');
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-                menu.classList.remove('open');
-            }
-        });
-    </script>
 </body>
 
 </html>
