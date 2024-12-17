@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -42,7 +42,7 @@
             max-width: 500px;
             margin: 15px auto;
         }
-         
+
         /* Botão de reserva */
         .service a {
             text-decoration: none;
@@ -135,6 +135,7 @@
         footer p {
             margin: 0;
         }
+
         .back-button {
             position: absolute;
             top: 10px;
@@ -152,7 +153,6 @@
             background-color: #555;
         }
     </style>
-
 </head>
 
 <body>
@@ -166,6 +166,19 @@
     </header>
 
     <div class="container">
+        <!-- Serviço 1 - Criolipolise -->
+        <div class="service">
+            <h2>Criolipolise</h2>
+            <div class="carousel">
+                <button class="left" onclick="changeSlide(-1, 'carouselCriolipolise')">&#10094;</button>
+                <img id="carouselCriolipolise" src="criolipolise-1.jpeg" alt="Criolipolise">
+                <button class="right" onclick="changeSlide(1, 'carouselCriolipolise')">&#10095;</button>
+            </div>
+            <b><p>Transformação visual completa com criopolise para redefinir contornos corporais.</p></b>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Criolipolise!" target="_blank">Agendamento</a>
+        </div>
+
+        <!-- Serviço 2 - Corte e Estilo -->
         <div class="service">
             <h2>Corte e Estilo</h2>
             <div class="carousel">
@@ -173,10 +186,11 @@
                 <img id="carouselCorte" src="cortecabelo1.jpeg" alt="Corte e Estilo">
                 <button class="right" onclick="changeSlide(1, 'carouselCorte')">&#10095;</button>
             </div>
-            <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autentica e única, pois ela será representada por si mesma.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes de Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
+            <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autêntica e única.</p></b>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes%20de%20Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
+        <!-- Serviço 3 - Manicure -->
         <div class="service">
             <h2>Manicure</h2>
             <div class="carousel">
@@ -188,13 +202,15 @@
             <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
+        <!-- Serviço 4 - Tratamento Facial -->
         <div class="service">
             <h2>Tratamento Facial</h2>
             <img src="facial.jpg" alt="Tratamento Facial" width="100%">
             <b><p>Tratamento Facial: Procedimentos que reduzem sinais de envelhecimento, como rugas e manchas.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Tratamento Facial%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
+            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Tratamento%20Facial%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
+        <!-- Serviço 5 - Massagem Relaxante -->
         <div class="service">
             <h2>Massagem Relaxante</h2>
             <img src="massagem-relaxante.jpg" alt="Massagem Relaxante" width="100%">
@@ -209,81 +225,84 @@
             <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Bumbum na Nuca%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
         </div>
 
-        <div class="service">
-            <h2>Drenagem</h2>
-            <img src="drenagem.jpg" alt="Drenagem" width="100%">
-            <b><p>Drenagem linfática: estimula a circulação e reduz a retenção de líquidos.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Drenagem%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
-            
-        </div>
-         
-        <div class="service">
-            <h2>Maquiagem</h2>
-            <img src="maquiagem.jpg" alt="Maquiagem"  width="100%">
-            <b><p>É uma arte que tem o poder de transformar a aparência e elevar a autoestima de qualquer pessoa.  </p></b>
-            <a href="https://api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20*Maquiagem*%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
-        </div>
-    </div>
-        <div class="service">
-            <h2>Ofurô</h2>
-            <img src="img2site.jpeg" alt="Ofurô" width="100%">
-            <b><p>Banhos relaxantes em imersão, com massagem de ondas de água para relaxamento profundo.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Ofurô%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4>Explorar</h4>
-                <ul>
-                    <li><a href="servicos.html">Espaço</a></li>
-                    <li><a href="sobrenos.html">Sobre nós</a></li>
-                    
-                </ul>
+               <!-- Serviço 7 - Drenagem -->
+               <div class="service">
+                <h2>Drenagem</h2>
+                <img src="drenagem.jpg" alt="Drenagem" width="100%">
+                <b><p>Drenagem linfática: estimula a circulação e reduz a retenção de líquidos.</p></b>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Drenagem%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
             </div>
-
-            <div class="footer-column">
-                <h4>Redes Sociais</h4>
-                <div class="footer-socials">
-                    <a href="https://www.facebook.com/salao_elevation" target="_blank">
-                        <i class="fab fa-facebook-f"></i> Facebook
-                    </a>
-                    <a href="https://www.instagram.com/salao_elevation" target="_blank">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
-                        <i class="fab fa-tiktok"></i> TikTok
-                    </a>
+    
+            <!-- Serviço 8 - Maquiagem -->
+            <div class="service">
+                <h2>Maquiagem</h2>
+                <img src="maquiagem.jpg" alt="Maquiagem" width="100%">
+                <b><p>É uma arte que tem o poder de transformar a aparência e elevar a autoestima de qualquer pessoa.</p></b>
+                <a href="https://api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Maquiagem%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
+            </div>
+    
+            <!-- Serviço 9 - Ofurô -->
+            <div class="service">
+                <h2>Ofurô</h2>
+                <img src="img2site.jpeg" alt="Ofurô" width="100%">
+                <b><p>Banhos relaxantes em imersão, com massagem de ondas de água para relaxamento profundo.</p></b>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Ofurô%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
+            </div>
+        </div>
+    
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="servicos.html">Espaço</a></li>
+                        <li><a href="sobrenos.html">Sobre nós</a></li>
+                    </ul>
+                </div>
+    
+                <div class="footer-column">
+                    <h4>Redes Sociais</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.facebook.com/salao_elevation" target="_blank">
+                            <i class="fab fa-facebook-f"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/salao_elevation" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
-    </footer>
-
-    <script>
-        const carousels = {
-            carouselCorte: ["cortecabelo1.jpeg", "cortecabelo2.jpeg"],
-            carouselManicure: ["manicure1.jpeg", "manicure2.jpeg", "manicure3.jpeg"]
-        };
-
-        function changeSlide(direction, carouselId) {
-            const images = carousels[carouselId];
-            const imgElement = document.getElementById(carouselId);
-            let currentIndex = images.indexOf(imgElement.src.split('/').pop());
-
-            currentIndex = (currentIndex + direction + images.length) % images.length;
-            imgElement.src = images[currentIndex];
-        }
-    </script>
-</body>
-
-</html>           
-   
-</body>
-
-</html>
+    
+            <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
+        </footer>
+    
+        <script>
+            // Carrossel de imagens
+            const carousels = {
+                carouselCriolipolise: ["criolipolise-1.jpeg", "antesedepoiscripo.jpg"],
+                carouselCorte: ["cortecabelo1.jpeg", "cortecabelo2.jpeg"],
+                carouselManicure: ["manicure1.jpeg", "manicure2.jpeg"],
+                
+                
+            };
+    
+            // Função para mudar as imagens do carrossel
+            function changeSlide(direction, carouselId) {
+                const images = carousels[carouselId];
+                const imgElement = document.getElementById(carouselId);
+                let currentIndex = images.indexOf(imgElement.src.split('/').pop());
+    
+                currentIndex = (currentIndex + direction + images.length) % images.length;
+                imgElement.src = images[currentIndex];
+            }
+        </script>
+    </body>
+    
+    </html>
+    
