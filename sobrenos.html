@@ -78,6 +78,41 @@
             background-color: #555;
         }
 
+        /* Botão de Exploração (em fundo preto com letras douradas) */
+        .explore-section {
+            background-color: #ffffff;
+            color: #d4af37;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+            margin-top: 40px;
+        }
+
+        .explore-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .explore-button {
+            background-color: #000000;
+            color: #d4af37;
+            font-size: 1.2em;
+            padding: 12px 24px;
+            border: 2px solid #d4af37;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+        }
+
+        .explore-button:hover {
+            background-color: #d4af37;
+            color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
         .footer-container {
             display: flex;
             justify-content: space-between;
@@ -134,28 +169,6 @@
             color: #333;
         }
 
-        .responsive-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .responsive-container img,
-        .responsive-container video {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .responsive-container img:hover,
-        .responsive-container video:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
-        }
-
         @media (max-width: 768px) {
             .back-button {
                 font-size: 14px;
@@ -186,14 +199,6 @@
             .footer-socials a {
                 font-size: 28px; /* Ícones maiores para facilitar o toque */
             }
-
-            .responsive-container {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-column ul li a {
-                font-size: 16px; /* Aumenta o tamanho da fonte para mais legibilidade */
-            }
         }
     </style>
 
@@ -210,6 +215,8 @@
         <p>No Salão Elevation, oferecemos serviços de terapia capilar e estética de alta qualidade. Nossa equipe é formada por profissionais experientes e apaixonados pelo que fazem, proporcionando sempre um atendimento de excelência.</p>
     </section>
 
+    
+
     <!-- Botão com Imagem para o Google Maps -->
     <div style="text-align: center; margin: 40px 0;">
         <a href="https://www.google.com.br/maps/place/R.+Aldeia+dos+Machacalis,+126a+-+Jardim+Etelvina,+S%C3%A3o+Paulo+-+SP,+08430-430/@-23.5276422,-46.4215221,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce646b228c6f55:0x6789c2174265b048!8m2!3d-23.5276471!4d-46.4189472!16s%2Fg%2F11trfjrn6z?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoJLDEwMjExMjMzSAFQAw%3D%3D" target="_blank" style="display: inline-block; text-decoration: none;">
@@ -218,21 +225,26 @@
         </a>
     </div>
 
+<!-- Explorar Section -->
+<div class="explore-section">
+    <h3>Explore nossos serviços</h3>
+    <a href="valores.html" class="explore-button">Serviços</a>
+    <a href="servicos.html" class="explore-button">Espaço</a>
+</div>
+
     <footer>
         <div class="footer-container">
             <div class="footer-column">
                 <h4>Explorar</h4>
                 <ul>
-                    <b>
                     <li><a href="valores.html">Serviços</a></li>
                     <li><a href="servicos.html">Espaço</a></li>
-                    </b>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h4>Redes Sociais</h4>
-                <div class="footer-socials">
+                <div class="footer-socials"><b>
                     <a href="https://www.facebook.com/salao_elevation" target="_blank">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
@@ -244,7 +256,7 @@
                     </a>
                     <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
                         <i class="fab fa-tiktok"></i> TikTok
-                    </a>
+                    </a></b>
                 </div>
             </div>
         </div>
