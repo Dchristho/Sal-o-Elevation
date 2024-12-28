@@ -82,6 +82,39 @@
         .back-button:hover {
             background-color: #555;
         }
+/* Botão de Exploração (em fundo preto com letras douradas) */
+.explore-section {
+            background-color: #ffffff;
+            color: #d4af37;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+            margin-top: 40px;
+        }
+
+        .explore-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .explore-button {
+            background-color: #000000;
+            color: #d4af37;
+            font-size: 1.2em;
+            padding: 12px 24px;
+            border: 2px solid #d4af37;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+        }
+
+        .explore-button:hover {
+            background-color: #d4af37;
+            color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
 
         .container {
             display: grid;
@@ -232,20 +265,17 @@
         <img src="fotooptimus,mesa.jpeg" alt="Imagem 3" loading="lazy">
         <video src="video2.mp4" autoplay muted loop loading="lazy"></video>
     </div>
-
+<!-- Explorar Section -->
+<div class="explore-section">
+    <h3>Explore nossos serviços</h3>
+    <a href="valores.html" class="explore-button">Serviços</a>
+    <a href="servicos.html" class="explore-button">Espaço</a>
+</div>
     <footer>
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4>Explorar</h4>
-                <ul>
-                    <li><a href="sobrenos.html">Sobre nós</a></li>
-                    <li><a href="valores.html">Serviços e Agendamento</a></li>
-                </ul>
-            </div>
 
             <div class="footer-column">
                 <h4>Redes Sociais</h4>
-                <div class="footer-socials">
+                <div class="footer-socials"><b>
                     <a href="https://www.facebook.com/salao_elevation" target="_blank">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
@@ -257,7 +287,7 @@
                     </a>
                     <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
                         <i class="fab fa-tiktok"></i> TikTok
-                    </a>
+                    </a></b>
                 </div>
             </div>
         </div>
