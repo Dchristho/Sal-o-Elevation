@@ -37,7 +37,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #f5f5f5;
+            background-color: #f3eeab;
             color: #333;
             font-size: 2em;
             text-transform: uppercase;
@@ -82,8 +82,23 @@
         .back-button:hover {
             background-color: #555;
         }
-/* Botão de Exploração (em fundo preto com letras douradas) */
-.explore-section {
+
+        /* Estilo do retângulo */
+        .rectangle-box {
+            background-color: #f9f9f9;
+            border: 2px solid #d4af37;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            max-width: 800px;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Botão de Exploração (em fundo preto com letras douradas) */
+        .explore-section {
             background-color: #ffffff;
             color: #d4af37;
             text-align: center;
@@ -239,21 +254,27 @@
         }
     </style>
 
-   
-
     <div class="hero">
         <p>Eleve sua Beleza ao Próximo Nível</p>
     </div>
 
-    <section>
-        <h2>Nossos Serviços</h2>
-        <p>Fazemos um lugar multidisciplinar, onde realizamos diversos serviços, desde cortes modernos a tratamentos estéticos inovadores. Na Elevation, você encontra tudo o que deseja para se sentir bem consigo mesma. Venha nos visitar e confira!</p>
-    </section>
+    <div>
+        <section>
+            <h2>Nossos Serviços</h2>
+            <div class="rectangle-box">
+                <p>Fazemos um lugar multidisciplinar, onde realizamos diversos serviços, desde cortes modernos a tratamentos estéticos inovadores. Na Elevation, você encontra tudo o que deseja para se sentir bem consigo mesma. Venha nos visitar e confira!</p>
+            </div>
+        </section>
+    </div>
 
-    <section>
-        <h2>Espaço</h2>
-        <p>Contamos com um espaço especializado para massagens, relaxamentos, procedimentos estéticos e muito mais. Ambiente confortável e equipado com as melhores tecnologias.</p>
-    </section>
+    <div>
+        <section>
+            <h2>Espaço</h2>
+            <div class="rectangle-box">
+                <p>Contamos com um espaço especializado para massagens, relaxamentos, procedimentos estéticos e muito mais. Ambiente confortável e equipado com as melhores tecnologias.</p>
+            </div>
+        </section>
+    </div>
 
     <button class="back-button" onclick="window.history.back()">Voltar</button>
 
@@ -263,17 +284,19 @@
         <img src="fotooptimus,mesa.jpeg" alt="Imagem 3" loading="lazy">
         <video src="video2.mp4" autoplay muted loop loading="lazy"></video>
     </div>
-<!-- Explorar Section -->
-<div class="explore-section">
-    <h3>Explore nossos serviços</h3>
-    <a href="valores.html" class="explore-button">Serviços</a>
-    <a href="servicos.html" class="explore-button">Espaço</a>
-</div>
-    <footer>
 
-            <div class="footer-column">
-                <h4>Redes Sociais</h4>
-                <div class="footer-socials"><b>
+    <!-- Explorar Section -->
+    <div class="explore-section">
+        <h3>Explore nossos serviços</h3>
+        <a href="valores.html" class="explore-button">Serviços</a>
+        <a href="servicos.html" class="explore-button">Espaço</a>
+    </div>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Redes Sociais</h4>
+            <div class="footer-socials">
+                <b>
                     <a href="https://www.facebook.com/salao_elevation" target="_blank">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
@@ -285,11 +308,10 @@
                     </a>
                     <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
                         <i class="fab fa-tiktok"></i> TikTok
-                    </a></b>
-                </div>
+                    </a>
+                </b>
             </div>
         </div>
-
         <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
 

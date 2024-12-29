@@ -129,7 +129,7 @@
             text-decoration: none;
             color: #333;
             margin-right: 15px;
-            font-size: 18px;
+            font-size: 28px;
         }
 
         footer p {
@@ -138,8 +138,8 @@
 
         .back-button {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 20px;
+            left: 20px;
             background-color: #333;
             color: #fff;
             border: none;
@@ -152,6 +152,40 @@
         .back-button:hover {
             background-color: #555;
         }
+         /* Botão de Exploração (em fundo preto com letras douradas) */
+         .explore-section {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+            margin-top: 40px;
+        }
+
+        .explore-section h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .explore-button {
+            background-color: #000000;
+            color: #d6ca1f;
+            font-size: 1.2em;
+            padding: 12px 24px;
+            border: 2px solid #d4af37;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
+        }
+
+        .explore-button:hover {
+            background-color: #ffd000;
+            color: #ffffff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
     </style>
 </head>
 
@@ -249,60 +283,37 @@
                 <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Ofurô%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
             </div>
         </div>
-    
-        <footer>
-            <div class="footer-container">
-                <div class="footer-column">
-                    <h4>Explorar</h4>
-                    <ul>
-                        <li><a href="servicos.html">Espaço</a></li>
-                        <li><a href="sobrenos.html">Sobre nós</a></li>
-                    </ul>
-                </div>
-    
-                <div class="footer-column">
-                    <h4>Redes Sociais</h4>
-                    <div class="footer-socials">
-                        <a href="https://www.facebook.com/salao_elevation" target="_blank">
-                            <i class="fab fa-facebook-f"></i> Facebook
-                        </a>
-                        <a href="https://www.instagram.com/salao_elevation" target="_blank">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
-                            <i class="fab fa-whatsapp"></i> WhatsApp
-                        </a>
-                        <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
-                            <i class="fab fa-tiktok"></i> TikTok
-                        </a>
-                    </div>
+  
+    <!-- Explorar Section -->
+<div class="explore-section">
+    <h3>Explore nossos serviços</h3>
+    <a href="valores.html" class="explore-button">Serviços</a>
+    <a href="servicos.html" class="explore-button">Espaço</a>
+</div>
+
+    <footer>
+       
+
+            <div class="footer-column">
+                <b><h4>Redes Sociais</h4></b>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/salao_elevation" target="_blank">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                    <a href="https://www.instagram.com/salao_elevation" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
+                        <i class="fab fa-tiktok"></i> TikTok
+                    </a>
                 </div>
             </div>
-    
-            <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
-        </footer>
-    
-        <script>
-            // Carrossel de imagens
-            const carousels = {
-                carouselCriolipolise: ["criolipolise-1.jpeg", "antesedepoiscripo.jpg"],
-                carouselCorte: ["cortecabelo1.jpeg", "cortecabelo2.jpeg"],
-                carouselManicure: ["manicure1.jpeg", "manicure2.jpeg"],
-                
-                
-            };
-    
-            // Função para mudar as imagens do carrossel
-            function changeSlide(direction, carouselId) {
-                const images = carousels[carouselId];
-                const imgElement = document.getElementById(carouselId);
-                let currentIndex = images.indexOf(imgElement.src.split('/').pop());
-    
-                currentIndex = (currentIndex + direction + images.length) % images.length;
-                imgElement.src = images[currentIndex];
-            }
-        </script>
-    </body>
-    
-    </html>
-    
+        </div>
+
+        <b><p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p></b>
+    </footer>
+</body>
+</html>
