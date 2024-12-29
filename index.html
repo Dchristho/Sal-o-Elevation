@@ -1,6 +1,5 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>  
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,11 +30,11 @@
         }
 
         .hero {
-            background-image: url(""); /* Substitua pela imagem do salão */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(255, 255, 255, 0.3)), url("logonovosalao.png"); /* Gradiente + imagem de fundo */
             background-size: cover;
             background-position: center;
             text-align: center;
-            padding: 120px 20px;
+            padding: 100px 20px;
             color: #fff;
             position: relative;
         }
@@ -121,7 +120,7 @@
 
         footer {
             background: linear-gradient(to top, rgb(255, 217, 92), rgba(233, 233, 233, 0.1));
-            padding: 20px;
+            padding: 40px 20px;
             text-align: center;
             border-top: 3px solid #d4af37;
             color: #000000;
@@ -138,18 +137,30 @@
 
         .footer-column h4 {
             color: #333;
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .footer-column ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin: 10px 0;
         }
 
         .footer-column ul li a {
             text-decoration: none;
             color: #333;
+            font-size: 16px;
+            font-weight: 600;
             transition: color 0.3s ease;
         }
 
         .footer-column ul li a:hover {
-            color: #000;
+            color: #d4af37;
         }
 
         .footer-socials a {
@@ -157,59 +168,37 @@
             text-decoration: none;
             color: #333;
             margin-right: 15px;
-            font-size: 18px;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-socials a:hover {
+            color: #d4af37;
         }
 
         footer p {
-            margin: 0;
+            margin: 20px 0 0;
         }
 
         /* Estilo responsivo para telas menores */
         @media (max-width: 768px) {
-            .features {
-                flex-direction: column; /* Organiza os itens verticalmente */
-                align-items: center;
-            }
-
-            .feature {
-                width: 90%; /* Ajusta a largura dos itens para caber em telas menores */
-            }
-
-            .hero {
-                padding: 60px 20px; /* Ajusta o espaçamento para telas pequenas */
-            }
-
-            .hero h1 {
-                font-size: 2em; /* Reduz o tamanho da fonte para títulos */
-            }
-
-            .hero p {
-                font-size: 1.2em; /* Ajusta o tamanho do parágrafo */
-            }
-
-            .hero a {
-                font-size: 1em; /* Diminui o botão para dispositivos móveis */
-                padding: 10px 20px;
-            }
-
-            footer .footer-container {
-                flex-direction: column; /* Coloca as colunas do footer verticalmente */
+            .footer-container {
+                flex-direction: column;
                 align-items: center;
             }
 
             .footer-column {
-                margin-bottom: 20px; /* Espaçamento entre as colunas no footer */
                 text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .footer-socials {
+                justify-content: center;
+                gap: 20px;
             }
         }
 
-        /* Alteração na cor do texto na área de botões */
-        .feature h3, .feature p {
-            color: #000; /* Altera o texto para preto */
-        }
-
     </style>
-
 </head>
 
 <body>
@@ -217,13 +206,12 @@
         <img src="logonovosalao.png" alt="Logo Salão Elevation" />
     </header>
 
-   
-<!--Botões de serviços-->
+    <!--Botões de serviços-->
     <div class="features">
         <a href="valores.html" class="feature">
             <i class="fas fa-cut"></i>
             <h3>Cortes Personalizados</h3>
-           <b> <p>Transformamos seu estilo com cortes modernos e sob medida.</p></b>
+            <b><p>Transformamos seu estilo com cortes modernos e sob medida.</p></b>
         </a>
         <a href="valores.html" class="feature">
             <i class="fas fa-paint-brush"></i>
@@ -241,33 +229,33 @@
         <div class="footer-container">
             <div class="footer-column">
                 <h4>Explorar</h4>
-                <b><ul>
+                <ul>
                     <li><a href="servicos.html">Espaço</a></li>
                     <li><a href="valores.html">Serviços e Agendamento</a></li>
                     <li><a href="sobrenos.html">Sobre nós</a></li>
-                </ul></b>
+                </ul>
             </div>
 
             <div class="footer-column">
-                <b><h4>Redes Sociais</h4></b>
-                <div class="footer-socials"><b>
-                    <a href="https://www.facebook.com/salao_elevation" target="_blank">
+                <h4>Redes Sociais</h4>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=100064480581505&mibextid=ZbWKwL" target="_blank">
                         <i class="fab fa-facebook-f"></i> Facebook
                     </a>
                     <a href="https://www.instagram.com/salao_elevation" target="_blank">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
-                    <a href="https://api.whatsapp.com/message/67PXANH2XQKSN1?autoload=1&app_absent=0" target="_blank">
+                    <a href="https://wa.me/message/67PXANH2XQKSN1" target="_blank">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="https://www.tiktok.com/@salao_elevation" target="_blank">
                         <i class="fab fa-tiktok"></i> TikTok
-                    </a></b>
+                    </a>
                 </div>
             </div>
         </div>
 
-        <b><p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p></b>
+        <p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p>
     </footer>
 </body>
 
