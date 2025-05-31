@@ -64,12 +64,19 @@
         .carousel {
             position: relative;
             text-align: center;
+            overflow: hidden;
+            padding: 15px;
         }
 
         .carousel img {
             width: 100%;
             height: auto;
             border-radius: 8px;
+            display: none;
+        }
+
+        .carousel img.active {
+            display: block;
         }
 
         .carousel button {
@@ -82,6 +89,7 @@
             padding: 10px;
             cursor: pointer;
             z-index: 10;
+            border-radius: 50%;
         }
 
         .carousel button.left {
@@ -247,12 +255,11 @@
         <!-- Serviço 1 - Criolipolise -->
         <div class="service">
             <h2>Criolipolise</h2>
-            <div class="carousel">
-                <button class="left" onclick="changeSlide(-1, 'carouselCriolipolise')">&#10094;</button>
-                <img id="carouselCriolipolise" src="criolipolise-1.jpeg" alt="Criolipolise" 
-                    data-images="criolipolise-1.jpeg,antesedepoiscripo.jpg" 
-                    data-current-index="0">
-                <button class="right" onclick="changeSlide(1, 'carouselCriolipolise')">&#10095;</button>
+            <div class="carousel" id="carouselCriolipolise">
+                <button class="left" onclick="changeSlide('prev', 'carouselCriolipolise')">&#10094;</button>
+                <img src="criolipolise-1.jpeg" alt="Criolipolise" class="active">
+                <img src="antesedepoiscripo.jpg" alt="Criolipolise">
+                <button class="right" onclick="changeSlide('next', 'carouselCriolipolise')">&#10095;</button>
             </div>
             <b><p>Transformação visual completa com criopolise para redefinir contornos corporais.</p></b>
             <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Criolipolise!" target="_blank">Agendamento</a>
@@ -261,12 +268,11 @@
         <!-- Serviço 2 - Corte e Estilo -->
         <div class="service">
             <h2>Corte e Estilo</h2>
-            <div class="carousel">
-                <button class="left" onclick="changeSlide(-1, 'carouselCorte')">&#10094;</button>
-                <img id="carouselCorte" src="cortecabelo1.jpeg" alt="Corte e Estilo" 
-                    data-images="cortecabelo1.jpeg,cortecabelo2.jpeg" 
-                    data-current-index="0">
-                <button class="right" onclick="changeSlide(1, 'carouselCorte')">&#10095;</button>
+            <div class="carousel" id="carouselCorte">
+                <button class="left" onclick="changeSlide('prev', 'carouselCorte')">&#10094;</button>
+                <img src="cortecabelo1.jpeg" alt="Corte e Estilo" class="active">
+                <img src="cortecabelo2.jpeg" alt="Corte e Estilo">
+                <button class="right" onclick="changeSlide('next', 'carouselCorte')">&#10095;</button>
             </div>
             <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autêntica e única.</p></b>
             <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes%20de%20Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
@@ -275,12 +281,12 @@
         <!-- Serviço 3 - Manicure -->
         <div class="service">
             <h2>Manicure</h2>
-            <div class="carousel">
-                <button class="left" onclick="changeSlide(-1, 'carouselManicure')">&#10094;</button>
-                <img id="carouselManicure" src="manicure1.jpeg" alt="Manicure" 
-                data-images="manicure1.jpeg,manicure2.jpeg,manicure3.jpeg" 
-                data-current-index="0">
-                <button class="right" onclick="changeSlide(1, 'carouselManicure')">&#10095;</button>
+            <div class="carousel" id="carouselManicure">
+                <button class="left" onclick="changeSlide('prev', 'carouselManicure')">&#10094;</button>
+                <img src="manicure1.jpeg" alt="Manicure" class="active">
+                <img src="manicure2.jpeg" alt="Manicure">
+                <img src="manicure3.jpeg" alt="Manicure">
+                <button class="right" onclick="changeSlide('next', 'carouselManicure')">&#10095;</button>
             </div>
             <b><p>São cuidados, responsáveis pela saúde e pela beleza das mãos e dos pés.</p></b>
             <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
@@ -337,8 +343,9 @@
 
     <div class="explore-section">
         <h3>Explore nossos serviços</h3>
-        <a href="valores.html" class="explore-button">Serviços</a>
+      
         <a href="servicos.html" class="explore-button">Espaço</a>
+        <a href="sobrenos.html" class="explore-button">Sobre Nós</a>
     </div>
 
     <footer>
@@ -363,20 +370,50 @@
         </div>
         <script>
             function changeSlide(direction, carouselId) {
-                // Seleciona o carrossel pelo ID
                 const carousel = document.getElementById(carouselId);
-        
-                // Recupera a lista de imagens e o índice atual
-                const images = carousel.dataset.images.split(',');
-                let currentIndex = parseInt(carousel.dataset.currentIndex, 10);
-        
-                // Calcula o próximo índice
-                let nextIndex = (currentIndex + direction + images.length) % images.length;
-        
-                // Atualiza o `src` da imagem e o índice atual no atributo de dados
-                carousel.src = images[nextIndex];
-                carousel.dataset.currentIndex = nextIndex;
+                if (!carousel) return;
+
+                const images = carousel.getElementsByTagName('img');
+                if (images.length === 0) return;
+
+                // Encontrar a imagem atual
+                const currentImage = carousel.querySelector('.active');
+                if (!currentImage) return;
+
+                // Remover classe active da imagem atual
+                currentImage.classList.remove('active');
+
+                // Calcular índice da próxima imagem
+                const currentIndex = Array.from(images).indexOf(currentImage);
+                let nextIndex;
+
+                if (direction === 'next') {
+                    nextIndex = (currentIndex + 1) % images.length;
+                } else if (direction === 'prev') {
+                    nextIndex = (currentIndex - 1 + images.length) % images.length;
+                } else {
+                    return;
+                }
+
+                // Adicionar classe active à próxima imagem
+                images[nextIndex].classList.add('active');
             }
+
+            // Inicializar carrossel quando a página carregar
+            document.addEventListener('DOMContentLoaded', () => {
+                const carousels = document.querySelectorAll('.carousel');
+                carousels.forEach(carousel => {
+                    const images = carousel.getElementsByTagName('img');
+                    if (images.length > 0) {
+                        // Remover todas as classes active existentes
+                        const activeImages = carousel.querySelectorAll('.active');
+                        activeImages.forEach(img => img.classList.remove('active'));
+                        
+                        // Adicionar classe active à primeira imagem
+                        images[0].classList.add('active');
+                    }
+                });
+            });
         </script>
         
         <b><p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p></b>
