@@ -116,43 +116,8 @@
         .swiper-slide img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-
-        .swiper-button-next, 
-        .swiper-button-prev {
-            color: #fff;
-            background: rgba(0, 0, 0, 0.4);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-        .swiper-button-next:hover, 
-        .swiper-button-prev:hover {
-            background: #d4af37;
-        }
-
-        .swiper-button-next:after, 
-        .swiper-button-prev:after {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .swiper-pagination-bullet {
-            background: #fff;
-            opacity: 0.7;
-            width: 10px;
-            height: 10px;
-        }
-
-        .swiper-pagination-bullet-active {
-            opacity: 1;
-            background: #d4af37;
+            object-fit: contain; /* Alterado de 'cover' para 'contain' para mostrar a imagem completa */
+            background-color: #f5f5f5; /* Fundo neutro para imagens não preencherem todo o espaço */
         }
 
         /* Footer */
@@ -329,15 +294,12 @@
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="antesedepoiscripo.jpg" alt="Criolipolise">
-                        </div>
-                        <div class="swiper-slide">
                             <img src="criolipolise-1.jpeg" alt="Criolipolise">
                         </div>
+                        <div class="swiper-slide">
+                            <img src="antesedepoiscripo.jpg" alt="Criolipolise">
+                        </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
                 <p class="service-description"><b>Transformação visual completa com criopolise para redefinir contornos corporais.</b></p>
                 <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Criolipolise!" target="_blank">Agendamento</a>
@@ -355,9 +317,6 @@
                             <img src="cortecabelo2.jpeg" alt="Corte e Estilo">
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
                 <p class="service-description"><b>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autêntica e única.</b></p>
                 <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes%20de%20Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
@@ -378,9 +337,6 @@
                             <img src="manicure3.jpeg" alt="Manicure">
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
                 <p class="service-description"><b>São cuidados, responsáveis pela saúde e pela beleza das mãos e dos pés.</b></p>
                 <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
@@ -401,9 +357,6 @@
                             <img src="sobrahenna1.jpeg" alt="Design de Sobrancelhas">
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
                 <p class="service-description"><b>Modelagem perfeita para valorizar seu olhar, com técnicas de henna e laminagem para um resultado natural e duradouro.</b></p>
                 <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Design%20de%20Sobrancelhas%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
@@ -424,9 +377,6 @@
                             <img src="unhasgel3.webp" alt="Unhas em Gel">
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
                 </div>
                 <p class="service-description"><b>Alongamento e fortalecimento com gel, garantindo durabilidade e beleza por semanas com acabamento perfeito.</b></p>
                 <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Unhas%20em%20Gel%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
@@ -475,15 +425,7 @@
                     autoplay: {
                         delay: 5000,
                         disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
+                    }
                 });
             });
         });
