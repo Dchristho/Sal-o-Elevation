@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços - Salão Elevation</title>
-    <link rel="stylesheet" href="/css/valores.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <style>
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
             color: #333;
+            overflow-x: hidden;
         }
 
         header {
@@ -21,83 +22,137 @@
             color: #fff;
             padding: 20px;
             border-bottom: 3px solid #d4af37;
+            position: relative;
         }
 
         h1 {
             margin: 0;
             font-size: 2.5em;
+            color: #d4af37;
         }
 
         .container {
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .service {
             background-color: #fff;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #d3d3d3;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            margin: 15px auto;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
         /* Botão de reserva */
         .service a {
             text-decoration: none;
             display: inline-block;
-            padding: 12px 20px;
+            padding: 12px 25px;
             background-color: #d4af37;
             color: #fff;
             border-radius: 25px;
             font-size: 1em;
             font-weight: 600;
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 15px;
         }
 
         .service a:hover {
             background-color: #b5942f;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 12px rgba(180, 148, 47, 0.4);
         }
 
-        .carousel {
+        .service-title {
+            color: #d4af37;
+            font-size: 1.8em;
+            margin-bottom: 15px;
             position: relative;
-            text-align: center;
-            overflow: hidden;
-            padding: 15px;
+            padding-bottom: 10px;
         }
 
-        .carousel img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: none;
-        }
-
-        .carousel img.active {
-            display: block;
-        }
-
-        .carousel button {
+        .service-title:after {
+            content: '';
             position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: #d4af37;
+        }
+
+        .service-description {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Estilos do carrossel Swiper */
+        .swiper-container {
+            width: 100%;
+            height: 350px;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .swiper-slide {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .swiper-button-next, 
+        .swiper-button-prev {
             color: #fff;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
+            background: rgba(0, 0, 0, 0.4);
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
         }
 
-        .carousel button.left {
-            left: 10px;
+        .swiper-button-next:hover, 
+        .swiper-button-prev:hover {
+            background: #d4af37;
         }
 
-        .carousel button.right {
-            right: 10px;
+        .swiper-button-next:after, 
+        .swiper-button-prev:after {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .swiper-pagination-bullet {
+            background: #fff;
+            opacity: 0.7;
+            width: 10px;
+            height: 10px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #d4af37;
         }
 
         /* Footer */
@@ -149,6 +204,8 @@
             text-align: center;
             color: #000000;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            border-top: 3px solid #d4af37;
         }
 
         footer p {
@@ -185,7 +242,11 @@
             }
 
             .footer-socials a {
-                font-size: 28px; /* Ícones maiores para facilitar o toque */
+                font-size: 28px;
+            }
+            
+            .swiper-container {
+                height: 280px;
             }
         }
 
@@ -200,46 +261,55 @@
             font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
+            z-index: 10;
         }
 
         .back-button:hover {
             background-color: #555;
         }
 
-        /* Botão de Exploração (em fundo preto com letras douradas) */
+        /* Botão de Exploração */
         .explore-section {
             background-color: #ffffff;
             color: #000000;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             border-top: 2px solid #d4af37;
             margin-top: 40px;
         }
 
         .explore-section h3 {
             font-size: 1.8em;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            color: #d4af37;
         }
 
         .explore-button {
             background-color: #000000;
-            color: #d6ca1f;
+            color: #d4af37;
             font-size: 1.2em;
             padding: 12px 24px;
             border: 2px solid #d4af37;
             border-radius: 30px;
             text-decoration: none;
-            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.3s ease;
             display: inline-block;
+            margin: 0 10px 10px;
         }
 
         .explore-button:hover {
-            background-color: #ffd000;
+            background-color: #d4af37;
             color: #ffffff;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             transform: translateY(-3px);
         }
-
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -252,52 +322,120 @@
     </header>
 
     <div class="container">
-        <!-- Serviço 1 - Criolipolise -->
-        <div class="service">
-            <h2>Criolipolise</h2>
-            <div class="carousel" id="carouselCriolipolise">
-                <button class="left" onclick="changeSlide('prev', 'carouselCriolipolise')">&#10094;</button>
-                <img src="criolipolise-1.jpeg" alt="Criolipolise" class="active">
-                <img src="antesedepoiscripo.jpg" alt="Criolipolise">
-                <button class="right" onclick="changeSlide('next', 'carouselCriolipolise')">&#10095;</button>
+        <div class="service-grid">
+            <!-- Serviço 1 - Criolipolise -->
+            <div class="service">
+                <h2 class="service-title">Criolipolise</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="antesedepoiscripo.jpg" alt="Criolipolise">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="criolipolise-1.jpeg" alt="Criolipolise">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <p class="service-description"><b>Transformação visual completa com criopolise para redefinir contornos corporais.</b></p>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Criolipolise!" target="_blank">Agendamento</a>
             </div>
-            <b><p>Transformação visual completa com criopolise para redefinir contornos corporais.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Criolipolise!" target="_blank">Agendamento</a>
-        </div>
 
-        <!-- Serviço 2 - Corte e Estilo -->
-        <div class="service">
-            <h2>Corte e Estilo</h2>
-            <div class="carousel" id="carouselCorte">
-                <button class="left" onclick="changeSlide('prev', 'carouselCorte')">&#10094;</button>
-                <img src="cortecabelo1.jpeg" alt="Corte e Estilo" class="active">
-                <img src="cortecabelo2.jpeg" alt="Corte e Estilo">
-                <button class="right" onclick="changeSlide('next', 'carouselCorte')">&#10095;</button>
+            <!-- Serviço 2 - Corte e Estilo -->
+            <div class="service">
+                <h2 class="service-title">Corte e Estilo</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="cortecabelo1.jpeg" alt="Corte e Estilo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="cortecabelo2.jpeg" alt="Corte e Estilo">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <p class="service-description"><b>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autêntica e única.</b></p>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes%20de%20Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
             </div>
-            <b><p>É o que define o estilo visual dos cabelos e consequentemente, o estilo visual da pessoa. Acompanhar o design do corte, com a personalidade da pessoa, torna a mesma mais autêntica e única.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Cortes%20de%20Cabelo%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
-        </div>
 
-        <!-- Serviço 3 - Manicure -->
-        <div class="service">
-            <h2>Manicure</h2>
-            <div class="carousel" id="carouselManicure">
-                <button class="left" onclick="changeSlide('prev', 'carouselManicure')">&#10094;</button>
-                <img src="manicure1.jpeg" alt="Manicure" class="active">
-                <img src="manicure2.jpeg" alt="Manicure">
-                <img src="manicure3.jpeg" alt="Manicure">
-                <button class="right" onclick="changeSlide('next', 'carouselManicure')">&#10095;</button>
+            <!-- Serviço 3 - Manicure -->
+            <div class="service">
+                <h2 class="service-title">Manicure</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="manicure1.jpeg" alt="Manicure">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="manicure2.jpeg" alt="Manicure">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="manicure3.jpeg" alt="Manicure">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <p class="service-description"><b>São cuidados, responsáveis pela saúde e pela beleza das mãos e dos pés.</b></p>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
             </div>
-            <b><p>São cuidados, responsáveis pela saúde e pela beleza das mãos e dos pés.</p></b>
-            <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Manicure%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
-        </div>
 
-      
-  
+            <!-- Serviço 4 - Design de Sobrancelhas -->
+            <div class="service">
+                <h2 class="service-title">Design de Sobrancelhas</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="sobrancelha.png" alt="Design de Sobrancelhas">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sobrahenna2.jpg" alt="Design de Sobrancelhas">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="sobrahenna1.jpeg" alt="Design de Sobrancelhas">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <p class="service-description"><b>Modelagem perfeita para valorizar seu olhar, com técnicas de henna e laminagem para um resultado natural e duradouro.</b></p>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Design%20de%20Sobrancelhas%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
+            </div>
+
+            <!-- Serviço 5 - Unhas em Gel -->
+            <div class="service">
+                <h2 class="service-title">Unhas em Gel</h2>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="unhasgel1.webp" alt="Unhas em Gel">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="unhasgel2.webp" alt="Unhas em Gel">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="unhasgel3.webp" alt="Unhas em Gel">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+                <p class="service-description"><b>Alongamento e fortalecimento com gel, garantindo durabilidade e beleza por semanas com acabamento perfeito.</b></p>
+                <a href="//api.whatsapp.com/send?phone=5511980272343&text=Olá,%20estou%20interessado%20no%20serviço%20de%20Unhas%20em%20Gel%20do%20Salão%20Elevation!" target="_blank">Agendamento</a>
+            </div>
+        </div>
+    </div>
 
     <div class="explore-section">
         <h3>Explore nossos serviços</h3>
-      
         <a href="servicos.html" class="explore-button">Espaço</a>
         <a href="sobrenos.html" class="explore-button">Sobre Nós</a>
     </div>
@@ -322,57 +460,33 @@
                 </div>
             </div>
         </div>
-        <script>
-            function changeSlide(direction, carouselId) {
-                const carousel = document.getElementById(carouselId);
-                if (!carousel) return;
-
-                const images = carousel.getElementsByTagName('img');
-                if (images.length === 0) return;
-
-                // Encontrar a imagem atual
-                const currentImage = carousel.querySelector('.active');
-                if (!currentImage) return;
-
-                // Remover classe active da imagem atual
-                currentImage.classList.remove('active');
-
-                // Calcular índice da próxima imagem
-                const currentIndex = Array.from(images).indexOf(currentImage);
-                let nextIndex;
-
-                if (direction === 'next') {
-                    nextIndex = (currentIndex + 1) % images.length;
-                } else if (direction === 'prev') {
-                    nextIndex = (currentIndex - 1 + images.length) % images.length;
-                } else {
-                    return;
-                }
-
-                // Adicionar classe active à próxima imagem
-                images[nextIndex].classList.add('active');
-            }
-
-            // Inicializar carrossel quando a página carregar
-            document.addEventListener('DOMContentLoaded', () => {
-                const carousels = document.querySelectorAll('.carousel');
-                carousels.forEach(carousel => {
-                    const images = carousel.getElementsByTagName('img');
-                    if (images.length > 0) {
-                        // Remover todas as classes active existentes
-                        const activeImages = carousel.querySelectorAll('.active');
-                        activeImages.forEach(img => img.classList.remove('active'));
-                        
-                        // Adicionar classe active à primeira imagem
-                        images[0].classList.add('active');
-                    }
-                });
-            });
-        </script>
-        
         <b><p>&copy; 2024 Salão Elevation. Todos os direitos reservados.</p></b>
     </footer>
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Inicializar todos os carrosséis
+        document.addEventListener('DOMContentLoaded', function() {
+            const allSwipers = document.querySelectorAll('.swiper-container');
+            
+            allSwipers.forEach(swiper => {
+                new Swiper(swiper, {
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            });
+        });
+    </script>
 </body>
 </html>
